@@ -18,8 +18,8 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/demo:v4 .
+        docker build -t hainguyenduy2004/demo:v4 .
 
     - name: Push image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/demo:v4
+        docker push hainguyenduy2004/demo:v4
