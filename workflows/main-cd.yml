@@ -1,0 +1,35 @@
+name: CD Demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H 3.25.83.75 >> ~/.ssh/known_hosts
+        echo "$SSH_PRIVATE_KEY" > id_rsa
+        chmod 600 id_rsa
+        ssh -i id_rsa ubuntu@3.25.83.75 << 'EOF'
+          docker-compose down
+          docker rmi tuducmanh2911/demo:v4
+          docker-compose up -d
+        EOF
+        rm id_rsa
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

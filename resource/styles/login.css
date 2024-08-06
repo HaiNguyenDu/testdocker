@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+   
+    caret-color: transparent;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://peridotgrandhotel.com/wp-content/uploads/2022/09/2.-Lobby-Area-2-2000.jpg");
+    background-size: cover;
+}
+.header{
+    width: 100%;
+    display: flex;
+    font-size: 20px;
+    color: white;
+    font-family: 600;
+    justify-content: space-between;
+}
+.header img{
+    width: 200px;
+}
+.home{
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    display: flex;
+    height: 40px;
+    width: 110px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #00554C;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
+    margin: 20px 50px;
+   
+}
+.mainlogin{
+    width: 50vh;
+    height: 60vh;
+    background-color: rgb(255, 255, 255,0.8);
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.8);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.login{
+    width: 50vh;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: telelg;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    
+}
+@keyframes telelg{
+   from {
+        transform: translate(38vh,-38vh);  
+      }
+      to{
+        transform: translateX(0,0);   
+      }
+}
+.registed{
+    width: 50vh;
+    height: 60vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color:#00554C ;
+    animation-name: tele;
+    animation-duration: 2s;
+    border-radius: 10px;
+}
+@keyframes tele{
+  from
+  {
+    transform: translate(-38vh,38vh);
+    
+    
+  }
+  to{
+    transform: translateX(0,0);   
+  }
+}
+.text{
+    font-weight: 600;
+    margin-top: 50px;
+    font-size: 28px;
+    color:  rgb(25, 117, 49);
+    margin-bottom: 60px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+input{
+    font-family: "Roboto Condensed", sans-serif;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 3px;
+    border-style:solid ;
+    border-color:rgb(25, 117, 49);
+    color: rgb(25, 117, 49);
+}
+input::-webkit-input-placeholder{
+    font-size: 600;
+    color: rgb(25, 117, 49);
+    font-size: 16px;
+}
+.registed .text{
+    color: white;
+}
+.registed input{
+    border-color: white;
+}
+.registed ::-webkit-input-placeholder{
+    color: white;
+}
+.submit{
+    font-family: "Roboto Condensed", sans-serif;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00554C;
+    border-radius: 10px;
+    color: white;
+}
+.button{
+    margin-top: 10PX;
+    display: flex;
+    gap: 30PX;
+}
+.dky{
+    width: 100px;
+}
+.registedanimate{
+    width: 50vh;
+    height: 60vh;
+    border-radius: 0%;
+    background-color: #00554C;
+    position: absolute;
+    bottom: -38vh;
+    left: -38vh;
+    transform: rotate(45deg);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    animation: opacityy 1s;
+}
+#dky{
+    display: none;
+    position: absolute;
+    left: 1vh;
+    bottom: 5vh;
+    color: white ;
+}
+.registed #dky{
+    position: inherit;
+    background-color: white;
+    color:  #c99246;
+    display: flex;
+}
+.login #dky{
+    background-color: transparent;
+}
+.loginanimate{
+    width: 50vh;
+    height: 60vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    transform: rotate(45deg);
+    top: -40vh;
+    right: -40vh;
+    display: none;
+    
+    animation: opacityy 1s;
+}
+.registed #dn 
+{
+    position: absolute;
+    top:3vh;
+    right: 0.5vh;
+    background-color:transparent;
+    color: #00554C;
+}
+@keyframes opacityy{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

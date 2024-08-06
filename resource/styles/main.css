@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: "Be Vietnam Pro", sans-serif;
+   
+    caret-color: transparent;
+  
+}
+
+.container{
+    width: 100%;
+    position: relative;
+  
+}
+
+    
+
+.header{
+    width: 100%;
+    height: 80px;
+    background-color:rgba(255, 255, 255,0.4);
+    border: 2px;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    color: rgb(25, 117, 49);
+
+}
+.header_items_item{
+    cursor: pointer;
+}
+.header_items_left,.header_items_right{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 20px;
+}
+.biglogo img{
+    width: 12vw;
+    position: relative;
+    left: 50%;
+    transform:translateX(-50%);
+ 
+}
+.header_items_right .box{
+    color: white;
+    padding: 10px 18px;
+    background-color: #00554C;
+    border: 1px;
+    border-style: solid;
+    font-size: 18px;
+}
+.header_item:hover{
+
+    cursor: pointer;
+    color:#c99246;
+}
+.header_items_right .box:hover{
+    background-color:#c99246;
+    color: white;
+    transition-duration: 0.5s;
+}
+.body1{
+    width: 100%;
+    height:100vh;
+    background-image: url("https://nestahotel.com.vn/uploads/content/Hotel%20&%20Spa/Overview_4.jpg");
+    background-size: cover;
+}
+.body1 img{
+    width: 100%;  
+}
+.body2{
+    width: 100%;
+    position: relative;
+}
+.body2_item1{
+    width: 100%;
+    height: 30vw;
+    background-color: #FFF2DD;
+    position: relative;
+}
+.textlogo{
+    width: 20vw;
+    margin: 0 auto;
+}
+.body2_item1 img{
+    width: 20vw;
+    margin-top: 30px;
+ 
+}
+.body2_item2{
+    width: 100%;
+    height: 10vw;
+}
+.listimgintro{
+    width: 75vw;
+    height: 35vw;
+    overflow: hidden;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.listimg{
+    display: flex;
+    transform: translateX();
+    transform: translateY(-120px);
+    position: relative;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+.listimgintro img{
+    width: 75vw;
+    object-fit: cover;
+    
+}
+.slidebar{
+    width: 20vw;
+    height: 50px;
+    position: absolute;
+    bottom: 10%;  
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.slidebaritem{
+    width: 0.7vw;
+    height: 0.7vw;
+    border: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    border-color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    
+}
+.chose{
+    width: 1vw;
+    height: 1vw;
+    border-color: gold;
+    
+}
+.body2_item2{
+    width: 100%;
+    height:10vw;
+}
+.body3{
+    width: 100%;
+    height: 30vw;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.body3_text1{
+    font-family: 'Playfair Display', serif;
+    color: #c99246 ;
+    font-size: 30px;
+    font-style: italic ;
+    font-weight: 400;
+}
+.body3_text2{
+    font-family: 'Playfair Display', serif;
+    color: #00554C ;
+    font-size: 38px;
+    margin-top: 10px;
+}
+.body3_text{
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+   
+}
+.body4{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.body4_item1{
+    margin-top: 5vw;
+    width: 100%;
+    height: 20vw;
+    background-color: #00554C;
+    display: flex;
+    justify-content: center;
+}
+.body_4_item1_text{
+    color: #FFD78F;
+    font-size: 36px;
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+.body4_img{
+    width: 75vw;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+.body4_img_element{
+    width: 75vw;
+    height: 30vw;
+    overflow: hidden;
+}
+.body4_img img{
+    object-fit: cover;
+    width: 75vw;
+    transform: translateY(-150px);
+}
+.body4_img_text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 100px;
+}
+.body4_img_text_item1{
+    color: #c99246;
+    font-size: 14px;
+    font-family: 300;
+    letter-spacing: 0.125rem;
+    margin-top: 30px;
+}
+.body4_img_text_item2{
+    color: #00554c;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    
+}
+.body4_img_text_item3{
+    margin-top: 20px;
+    color: #343535;
+    font-size: 16px;
+    font-weight:300;
+}
+.body4_img_text .line{
+    width: 100px;
+    height: 3px;
+    background-color: #00554C;
+}
+.body5{
+    margin-top: 850px;
+    background-image: url("https://peridotgrandhotel.com/wp-content/uploads/2022/08/home-services-bg.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.body5_item1, .body5_item2{
+    width: 30%;
+    text-align: center;
+}
+.body5_item2_text1{
+    font-size: 36px;
+    color: #00554C;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+.body5_item2_text2{
+    margin-top: 25px;
+    font-size: 16px;
+    color: #343535;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+.boxlist{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.body5_item2 .box{
+    width: 8vw;
+    height: 8vw;
+    border-radius: 10px;
+    background-color: white;
+}
+.body5_item2 .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px ;
+    color: #c99246;
+    flex-direction: column;
+}
+.box_text{
+    font-size: 20px;
+}
+.end{
+    width: 100%;
+    margin-top: 400px;
+    height:  500px;
+    background-color: #00554C;
+    font-family: "Be Vietnam Pro", sans-serif;
+    color:white;
+    padding: 3vw 15vw;    
+    font-weight: 300;
+    display: flex;
+    gap: 50px;
+}
+.superend{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+.end_column_item,.end_column_logo{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+#logo{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.end_column_item i{
+    font-size: 24px;
+}
+.end_column_logo i{
+    font-size: 28px;
+}
+.end_column_header{
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 65px;
+}
+.end_column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

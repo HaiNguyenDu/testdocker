@@ -1,0 +1,573 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    caret-color: transparent;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://peridotgrandhotel.com/wp-content/uploads/2022/09/1.-Lobby-Entrance-2-2000.jpg");
+    background-size: cover;
+    display: flex;
+}
+.header
+{
+    width: 40vh;
+    height: 100%;
+    background-color: RGB(0, 85, 76,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+
+}
+
+.confirm{
+    width: 400px;
+    height: 150px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    position: absolute;
+    right: 530px;
+    animation: confirm 1.5s;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+}
+.background{
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,0.5 );
+    z-index: 1;
+    display: none;
+    
+}
+.confirm_button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.confirm_button_ok,.confirm_button_cancel{
+    background-color: rgb(0, 85, 76);
+    width: 80px;
+    height: 30px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes confirm{
+    from{opacity: 0;
+    transform: translateY(-150px);}
+    to{
+        opacity: 1;
+    }
+}
+.ifmroom{
+    display: none;
+    position: absolute;
+    width: 40%;
+    background-color:white;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    animation: animateifmroom 1.5s;
+}
+@keyframes animateifmroom{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.ifmroom_body{
+    display: flex;
+}
+.ifmroom_header{
+    padding-top: 30px;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    position: relative;
+   
+}
+.ifmroom_header img{
+    width: 150px;
+    position: absolute;
+    right: 20px;
+    top:0;
+    
+}
+.ifmroom_items{
+    width: 50%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    font-size: 20px;
+    padding-top: 30px;  
+}
+.ifmroom_button
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.ifmroom_button_item{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    background-color: rgb(0, 85, 76);
+    color: white;
+    border-radius: 10px;
+}
+.logo img{
+    width: 200px;
+}
+.textheader{
+    font-size: 28px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #c99246;
+}
+.line{
+    margin-top: 20px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+.listroom,.book,.QLTP{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 30px;
+    padding: 15px 0;
+
+}
+.listroom:hover,.book:hover,.QLTP:hover{
+    background-color: #c99246;
+}
+.main_listroom{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+    
+}
+.main_listroom_header{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+    cursor: pointer;
+}
+.main_listroom_header_item{
+    color: rgb(0, 85, 76);
+    font-size: 26px;
+}
+.choice{
+    padding-bottom: 10px;
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-color:rgb(0, 85, 76);
+}
+.main_listroom_line{
+    margin-top: 15px;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(0, 85, 76);
+}
+.main_listroom_items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+.main_listroom_items_1,.main_listroom_items_2,.main_listroom_items_3,.main_listroom_items_4{
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+    animation: animate 2s ease-out;
+    
+}
+@keyframes animate {
+    from{
+        transform: translateY(100px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+.main_listroom_items_1{
+    display: flex;
+}
+.main_listroom_item{
+  
+    width: 430px;
+    height: 245px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    cursor: pointer;
+    
+}
+
+.main_listroom_item_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.main_listroom_item_header_text{
+
+    font-size: 22px;
+    color: #00a6da;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+}
+.main_listroom_item_header_icon{
+    display: flex;
+    gap:10px;
+    font-size: 18px;
+}
+.main_listroom_item_Name{
+    width: 100%;
+    height: 22.5px;
+    font-size: 20px;
+}
+.CCCD{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.main_listroom_item_line{
+    width: 80%;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin-top: 10px;
+}
+.main_listroom_item_status{
+    width: 100%;
+    height: 25.7px;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #5a5c63;
+}
+.main_listroom_item_check{
+    display: flex;
+}
+.main_listroom_item_checkin,.main_listroom_item_checkout,.main_listroom_item_timecheckin{
+    width: 100%;
+    font-size: 10px;
+    margin-top: 5px;
+    color: #5a5c63;
+    margin-bottom: 10px;
+}
+
+.main_listroom_item_button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.main_listroom_item_button_checkin,.main_listroom_item_button_checkout{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color:rgb(0, 85, 76);
+    color: white;
+    border-radius: 10px;
+}
+.main_listroom_item_button_checkout{
+    opacity: 0;
+}
+.main_book_room{
+    width: 98%;
+    height: 300px;
+    margin: 30px auto;
+    border: 2px;
+    border-style: solid;
+    position: relative;
+    display: flex;
+    
+}
+.main_book_room_header{
+    position: absolute;
+    top:-13px;
+    left: 20px;
+    background-color: white;
+}
+.main_book{
+  display: none;
+  flex-direction: column;
+}
+.main_book_client{
+    width: 98%;
+    height: 380px;
+    margin: 20px auto;
+    border: 2px;
+    border-style: solid;
+    position: relative;
+    display: flex;
+}
+.main_book_client_header{
+    position: absolute;
+    top:-13px;
+    left: 20px;
+    background-color: white;
+}
+.main_book_room_el{
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    justify-content: space-between;   
+}
+.main_book_room input,.main_book_client input{
+    border: 2px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 5px;
+    caret-color:auto;
+
+}
+.main_book_room_item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    width: 315px;
+    
+}
+
+#gender{
+    flex-direction: column;
+    gap: 15px;
+}
+#gender .main_book_room_el_input{
+    display: flex;
+    gap: 15px;
+}
+
+#bed{
+    flex-direction: column;
+    gap: 15px;
+}
+#bed .main_book_room_el_input{
+    display: flex;
+    gap: 15px;
+}
+.people{
+    width: 20vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    position: relative;
+}
+.peoplepicker{
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 120px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.5) ;
+    border-radius: 5px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+    animation-name: load;
+    padding-top: 25px;
+}
+.buttonsubmit{
+    top: 220px;
+    font-size: 16px;
+    color:  rgb(255, 255, 255);
+    position: absolute;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color:rgb(25, 117, 49);
+    cursor: pointer;
+    display: none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.arrow{
+    padding-top: 30px;
+    font-size: 35px;
+}
+.changeroom,.changeadult,.changechild{
+    display: flex;
+    font-size: 30px;
+    width: 120px;
+    height: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    caret-color: transparent;
+}
+.changechild{
+    position: relative;
+}
+.exitbutton{
+    position: absolute;
+    top: -30px;
+    right: -5px;
+    font-size: 18px;
+    color:#c99246;
+    cursor: pointer;
+}
+.count{
+    font-size: 20px;
+}
+.plus,.minus{
+    cursor: pointer;
+}
+.room{
+    display: none;
+}
+.changeroom::after{
+    font-size: 12px;
+    content: "Phòng";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.changeroom{
+    display: none;
+}
+.changeadult::after{
+    font-size: 12px;
+    content: "NG.Lớn";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.changechild::after{
+    font-size: 12px;
+    content: "TR. Em";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.day{
+    font-size: 50px;
+}
+.room_item_text,.adult_item_text,.child_item_text{
+    font-size: 18px;
+}
+.main_book_submit{
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius:   5px;
+    background-color:rgb(0, 85, 76);
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+#matxa{
+    padding-right: 100px;
+}
+.main_QLTP{
+    width: 85%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.main_QLTP_header{
+    display: flex;
+    width: 80%;
+    margin-left: 50px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.main_QLTP .line{
+    width: 90%;
+    height: 2px;
+    margin-left: 50px;
+    background-color: rgb(0, 85, 76);
+}
+.main_QLTP_listuser{
+    width: 80%;
+    margin-left: 40px;
+}
+.main_QLTP_listuser_item{
+    display: flex;  
+    width: 118%;
+    margin-top: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 10px 10px;
+    align-items: center;
+}
+.main_QLTP_listuser_name{
+    width: 208px;
+}
+.main_QLTP_listuser_cccd{
+    width: 162px;
+}
+.main_QLTP_listuser_room{
+    width: 172px;
+}
+.main_QLTP_listuser_checkin{
+    width: 288px;
+}
+.main_QLTP_listuser_checkout{
+    width: 180px;
+}
+.main_QLTP_listuser_button{
+    padding: 5px 10px;
+    background-color: rgb(0, 85, 76);
+    color: white;
+    border-radius: 5px;
+}

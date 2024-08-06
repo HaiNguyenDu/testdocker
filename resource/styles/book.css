@@ -1,0 +1,244 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    caret-color: transparent;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #e9eaed;
+    animation-name: load;
+    animation-duration: 1.5s;
+    padding-bottom: 40px;
+}
+@keyframes load {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background-image: linear-gradient(1,rgb(36, 174, 72),rgb(25, 117, 49));
+    padding: 0 100px;
+}
+.logo img{
+    width: 90px;
+}
+.information{
+    width: 100%;
+    height: 120px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.3) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.time_date{
+    display: flex;
+    gap:10px;
+}
+.time_date_checkin,.time_date_checkout{
+    display: flex;
+    align-items: center;
+    gap: 10px;;
+}
+.people{
+    width: 20vw;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+}
+.peoplepicker{
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 120px;
+    box-shadow:5px 5px 10px rgba(0,0,0,0.5) ;
+    border-radius: 5px;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 400;
+    animation-name: load;
+    padding-top: 25px;
+    z-index: 2;
+}
+.buttonsubmit{
+    top: 220px;
+    font-size: 16px;
+    color:  rgb(255, 255, 255);
+    position: absolute;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color:rgb(25, 117, 49);
+    cursor: pointer;
+    display: none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    z-index: 3;
+}
+.arrow{
+    padding-top: 30px;
+    font-size: 35px;
+}
+.changeroom,.changeadult,.changechild{
+    display: flex;
+    font-size: 30px;
+    width: 120px;
+    height: 50px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    caret-color: transparent;
+}
+.changechild{
+    position: relative;
+}
+.exitbutton{
+    position: absolute;
+    top: -30px;
+    right: -5px;
+    font-size: 18px;
+    color:#c99246;
+    cursor: pointer;
+}
+.count{
+    font-size: 20px;
+}
+.plus,.minus{
+    cursor: pointer;
+}
+
+.changeroom::after{
+    font-size: 12px;
+    content: "Phòng";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.changeadult::after{
+    font-size: 12px;
+    content: "NG.Lớn";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.changechild::after{
+    font-size: 12px;
+    content: "TR. Em";
+    position: absolute;
+    top:-20px;
+    left: 0;
+    font-weight: 500;
+}
+.day{
+    font-size: 50px;
+}
+.room_item_text,.adult_item_text,.child_item_text{
+    font-size: 20px;
+}
+.buttonfind{
+    padding: 10px 15px;
+    background-color:rgb(25, 117, 49);
+    border-radius: 10px;
+    margin-top: 30px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+.countnight span{
+    padding: 2px 7px;
+    background-color: #c99246;
+    border-radius: 5px;
+}
+.date{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #e9eaed;
+    
+
+}
+.date_left,.date_right{
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    padding: 20px;
+
+}
+.date_day{
+    display: flex;
+    color: rgb(25, 117, 49);
+    padding: 20px;
+    gap: 62px;
+    font-size: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 600;
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.date_numbers_items{
+    width: 60px;
+    height: 60px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:white;
+    border-radius: 5px;
+    color:rgb(25, 117, 49);
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    animation-name: loadday;
+    animation-duration: 1.5s;
+    
+}
+.date_numbers_items:hover{
+    background-color: #cccaca;
+}
+@keyframes loadday {
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.date_header{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(25, 117, 49);
+}
+.date_numbers_items span{
+    font-size: 10px;
+}
+.money{
+    font-size: 10px;
+}
+.daychoice{
+    background-color: #c99246;
+}
+

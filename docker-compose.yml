@@ -1,0 +1,18 @@
+
+services:
+  node-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env
+    container_name: auth-node-app
+    environment:
+      - DATABASE=${DATABASE}
+      - PASSWORD=${PASSWORD}
+      - HOST=localhost
+      - USER_NAME=${USER_NAME}
+    depends_on:
+      - mysql
