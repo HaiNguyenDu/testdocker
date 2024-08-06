@@ -52,5 +52,5 @@ jobs:
             sudo docker rm  elastic_hellman || true
 
             sudo docker pull hainguyenduy2004/demo:v4
-            sudo docker run -d -p 3000:3000 hainguyenduy2004/demo:v4 .
+            sudo docker run -d -p 3000:3000 hainguyenduy2004/demo:v4 
           EOF
