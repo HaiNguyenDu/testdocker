@@ -28,7 +28,7 @@ jobs:
       with:
         host: 3.25.82.59
         username: ubuntu
-        key: ${{ secrets.SSH_PRIVATE_KEY}}
+        key: ${{secrets.SSH_PRIVATE_KEY}}
         script: |
           sudo docker pull hainguyenduy2004/demo:v4
           sudo docker stop v4-container || true
