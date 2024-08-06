@@ -52,5 +52,5 @@ jobs:
             docker rm  elastic_hellman || true
 
             docker pull hainguyenduy2004/demo:v4
-            docker run -d -p 3000:3000 --name hainguyenduy2004/demo:v4 .
+            docker run -d -p 3000:3000 hainguyenduy2004/demo:v4 .
           EOF
