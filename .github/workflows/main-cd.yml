@@ -20,7 +20,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Login to Docker Hub
-      run: echo "123456" | docker login -u "hainguyenduy2004" --password-stdin
+      run: echo "Nguyenduyhai2004" | docker login -u "hainguyenduy2004" --password-stdin
   
 
     - name: Deploy to server
