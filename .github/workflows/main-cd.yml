@@ -30,7 +30,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          docker pull hainguyenduy2004/demo:v4
-          docker stop v4-container || true
-          docker rm v4-container || true
-          docker run -d --name v4-container -p 80:3000 hainguyenduy2004/demo:v4
+          sudo docker pull hainguyenduy2004/demo:v4
+          sudo docker stop v4-container || true
+          sudo docker rm v4-container || true
+          sudo docker run -d --name v4-container -p 80:3000 hainguyenduy2004/demo:v4
