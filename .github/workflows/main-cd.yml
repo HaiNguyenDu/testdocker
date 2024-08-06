@@ -1,4 +1,4 @@
-name: CD Demo
+name: CD 
 
 on:
   workflow_dispatch:
@@ -18,17 +18,21 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+
+    - name: Setup Docker
+      uses: docker/setup-buildx-action@v2
+
     - name: Deploy
       run: |
         mkdir -p ~/.ssh
         ssh-keyscan -H 3.25.82.59 >> ~/.ssh/known_hosts
-        echo "$SSH_PRIVATE_KEY" > id_rsa
-        chmod 600 id_rsa
-        ssh -i id_rsa ubuntu@3.25.82.59 << 'EOF'
-         sudo docker compose down
-         sudo docker rmi hainguyenduy2004/demo:v4
-         sudo docker compose up -d
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh -i ~/.ssh/id_rsa ubuntu@3.25.82.59 << 'EOF'
+          sudo docker compose down
+          sudo docker rmi --force hainguyenduy2004/demo:v4
+          sudo docker compose up -d
         EOF
-        rm id_rsa
+        rm ~/.ssh/id_rsa
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
