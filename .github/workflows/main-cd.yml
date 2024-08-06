@@ -22,12 +22,12 @@ jobs:
     - name: Deploy
       run: |
         mkdir -p ~/.ssh
-        ssh-keyscan -H 3.25.83.75 >> ~/.ssh/known_hosts
+        ssh-keyscan -H 3.25.82.59 >> ~/.ssh/known_hosts
         echo "$SSH_PRIVATE_KEY" > id_rsa
         chmod 600 id_rsa
-        ssh -i id_rsa ubuntu@3.25.83.75 << 'EOF'
+        ssh -i id_rsa ubuntu@3.25.82.59 << 'EOF'
           docker-compose down
-          docker rmi tuducmanh2911/demo:v4
+          docker rmi hainguyenduy2004/demo:v4
           docker-compose up -d
         EOF
         rm id_rsa
