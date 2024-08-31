@@ -9,6 +9,9 @@ import bcrypt from 'bcryptjs'
 import hbs from 'nodemailer-express-handlebars'
 import path from 'path'
 env.config()
+
+
+
 export const checkuser= async(email,password)=>{
     const token = await customer.findOne({where :{
         email: email,

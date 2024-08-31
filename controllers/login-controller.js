@@ -5,7 +5,7 @@ import env from 'dotenv'
 import jwt from'jsonwebtoken'
 import { updateCustomer } from '../service/user-service.js'
 import { changePW } from '../service/login-service.js'
-
+import responseHandler from '../handler/response-handler.js'
 env.config()
  const getAccessToken = async(req,res)=>{
     const email = req.body.email
@@ -16,13 +16,11 @@ env.config()
     if(token)
     {
        
-        res.status(200).json({
-            token:token
-        })
+        responseHandler.ok(res,{token:token},"success")
         
     }
     else{
-        res.status(401).json({message:'fail'})
+        responseHandler.unauthenticate(res,"Fail to login")
     }
 }
 
@@ -30,11 +28,11 @@ env.config()
     const email = req.body.email
     const sOtp = await sendotp(email)
     .then(data=>{
-      console.log(data)
-      res.status(200).json({message:'success'})
+      responseHandler.ok(res,{},"Send OTP success")
+      
     })
     .catch(err=>{
-      console.error('sai',err)
+      responseHandler.notFound(res,"fail to send otp now")
     })
     
 
@@ -49,7 +47,7 @@ const confirm = async (req, res) => {
         updateCustomer({OTP:null},user.customerId)
         updateCustomer({OTPTIME:null},user.customerId)
         var token = jwt.sign({ customerId: user.customerId},'depzai')
-        res.status(200).json({ message: ' success',token:token });
+        responseHandler.ok(res,{token:token},"confirm ")
    
       } else {
         res.status(400).json({ message: 'invalid' });

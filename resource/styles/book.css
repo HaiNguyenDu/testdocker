@@ -29,6 +29,7 @@
     height: 70px;
     background-image: linear-gradient(1,rgb(36, 174, 72),rgb(25, 117, 49));
     padding: 0 100px;
+    background-color:rgb(25, 117, 49);
 }
 .logo img{
     width: 90px;

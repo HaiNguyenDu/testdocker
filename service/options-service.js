@@ -48,6 +48,9 @@ const getOption = async (option_id)=>{
     })
     return getOption
 }
+
+
+
 const update = async (option)=>{
     const query = 'update options set content = ? where option_id = ?'
     const update = await sequelize.query(query,{

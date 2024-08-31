@@ -14,10 +14,20 @@
     </style>
 </head>
 <body>
-    <form action="/profile" method="post" enctype="multipart/form-data">
-        <input type="file" name="avatar" />
-        <button class="submit-btn" type='submit'>Upload</button>
+    <form action="/api/v1/upLoad/File" enctype="multipart/form-data" method="POST"> 
+        <input type="file" name="myFile" />
+        <input type="submit" value="Upload a file"/>
     </form>
-   
+
+    <form action="/api/v1/upload/files"  enctype="multipart/form-data" method="POST">
+        <input type="file" name="myFiles" >
+        <input type="file" name="myFiles" >
+        <input type="submit" value="Upload your files"/>
+    </form>
+
+    <form action="/upload/photo" enctype="multipart/form-data" method="POST"> 
+        <input type="file" name="myImage" accept="image/*" />
+        <input type="submit" value="Upload Photo"/>
+    </form>
 </body>
 </html>

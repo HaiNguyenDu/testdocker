@@ -78,7 +78,7 @@ async function getlogin(url){
 
 function gettoken(){
     const buttonsubmmit = document.querySelector('.submit')
-    const url = '/login'
+    const url = '/api/v1/login'
     
 
     buttonsubmmit.addEventListener('click',()=>{
@@ -90,6 +90,7 @@ function gettoken(){
   
         const response = postlogin(url,customer)
         .then(data=>{
+            console.log(data)
             return data.json()
         })
         .then(data=>{
@@ -97,10 +98,11 @@ function gettoken(){
             const expirationDate = new Date();
             expirationDate.setHours(expirationDate.getHours() + 1);
 
-            document.cookie=`token = ${data.token};expries = ${expirationDate};path ='/'`
+            document.cookie=`token = ${data.data.token};expries = ${expirationDate};path ='/'`
            
             alert('dang nhap thanh cong')
-            window.location.href = '/home';
+            let urlhome ="/api/v1/home"
+            window.location.href = urlhome
          
         })
         .catch(err=>{
